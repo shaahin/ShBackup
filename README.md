@@ -26,7 +26,11 @@ Usage
 
     git clone https://github.com/shaahin/ShBackup.git
 
-2\. Create a .env file in the same directory as the ShBackup script with the following environment variables:
+2\. Make `shbackup.sh` executable:
+
+    chmod +x shbackup.sh
+
+3\. Create a .env file in the same directory as the ShBackup script with the following environment variables:
 
     
     ACCOUNT_ID="your_cloudflare_account_id"
@@ -36,16 +40,15 @@ Usage
     R2_BUCKET="your_r2_bucket"  # Replace with the Cloudflare R2 bucket name
     
 
-3\. (Optional) If you need to skip the rclone installation and cron job setup, use the --skip-setup flag:
+4\. (Optional) If you need to skip the rclone installation and cron job setup, use the --skip-setup flag:
 
     
-    ./ShBackup --env-file /path/to/custom_env_file --skip-setup
+    ./shbackup.sh --env-file /path/to/custom_env_file --skip-setup
     
 
-4\. Run the ShBackup script to perform the initial backup and optionally set up the cron job:
-
-    
-    ./ShBackup --env-file /path/to/.env
+5\. Run the ShBackup script to perform the initial backup and optionally set up the cron job:
+   
+    ./shbackup.sh --env-file /path/to/.env
     
 
 Important Note
